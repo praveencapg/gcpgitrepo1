@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: GCPDemo1
+  name: gcpdemo1
 spec:
   selector:
     matchLabels:
-      app: GCPDemo1
+      app: gcpdemo1
   replicas: 2 # Number of replicas that will be created for this deployment
   template:
     metadata:
       labels:
-        app: GCPDemo1
+        app: gcpdemo1
     spec:
       containers:
-        - name: GCPDemo1
+        - name: gcpdemo1
           image:  praveenkumar10/gcpdocrepo1 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
